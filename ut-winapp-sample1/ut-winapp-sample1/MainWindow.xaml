@@ -1,0 +1,24 @@
+﻿<Window x:Class="ut_winapp_sample1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ut_winapp_sample1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600" FontSize="16">
+    <DockPanel LastChildFill="False">
+        <DockPanel Margin="5" DockPanel.Dock="Top">
+            <TextBlock Margin="5" DockPanel.Dock="Left" Text="入力ファイル"/>
+            <Button Margin="5" DockPanel.Dock="Right" Width="60" Content="参照"></Button>
+            <TextBox Margin="5" Text="{Binding SrcFilePath}"></TextBox>
+        </DockPanel>
+        <DockPanel Margin="5" DockPanel.Dock="Top">
+            <TextBlock Margin="5" DockPanel.Dock="Left" Text="出力ファイル"/>
+            <Button Margin="5" DockPanel.Dock="Right" Width="60" Content="参照"></Button>
+            <TextBox Margin="5" Text="{Binding DestFilePath}"></TextBox>
+        </DockPanel>
+        <DockPanel Margin="5" DockPanel.Dock="Top">
+            <Button Margin="5" Content="実行" Click="OnRun"></Button>
+        </DockPanel>
+    </DockPanel>
+</Window>
